@@ -74,7 +74,7 @@
     { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
     { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
     { "tag": "🍎 Apple", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点", "🇨🇳 直连" ] },
+    { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点", "🇨🇳 直连"] },
     { "tag": "♻️ 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)HK|香港|HongKong"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "♻️ 台湾自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)TW|台湾|Taiwan"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "♻️ 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)SG|新加坡|Singapore"] }], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
