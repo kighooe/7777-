@@ -64,7 +64,7 @@
     { "tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "🌐 自选节点", "♻️ 香港自动", "♻️ 台湾自动", "♻️ 狮城自动", "♻️ 日本自动", "♻️ 韩国自动", "🇨🇳 直连"] },
     { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
     { "tag": "🌐 自选节点", "type": "selector", "outbounds": ["{all}"]},
-    { "tag": "🤖 OpenAI", "type": "urltest", "outbounds": ["♻️ 台湾自动", "♻️ 狮城自动", "♻️ 日本自动", "♻️ 韩国自动"], "url": "http://www.gstatic.com/generate_204", "interval": "10m", "tolerance": 50 },
+    { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["♻️ 台湾自动", "♻️ 狮城自动", "♻️ 日本自动", "♻️ 韩国自动"] },
     { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
     { "tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
     { "tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
