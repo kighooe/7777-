@@ -90,7 +90,7 @@
    "final": "🐟 漏网之鱼",
    "rules": 
    [
-     {"domain": ["pathofexile.com","webcdn.pathofexile.com","www.pathofexile.com","cache.pathofexile.com"], "outbound": "🇨🇳 直连"},
+     {"domain_suffix": ["pathofexile.com"], "outbound": "🇨🇳 直连"},
      {"action": "sniff"},
      {"protocol": "dns", "action": "hijack-dns"},
      {"clash_mode": "direct", "outbound": "🇨🇳 直连"},
