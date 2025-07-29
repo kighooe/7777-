@@ -25,8 +25,8 @@
  {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "61.153.177.196", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "dial": ["detour": "🇨🇳 直连"] },
-     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "dial": ["detour": "🚀 默认代理"] }
+     {"tag": "dns_direct", "address": "61.153.177.196", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "dial": {"detour": "🇨🇳 直连"} },
+     {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "dial": {"detour": "🚀 默认代理"} }
    ],
    "rules": 
    [
@@ -86,7 +86,7 @@
   
   "route": 
  {
-   "default_domain_resolver": "dns_proxy"，
+   "default_domain_resolver": "dns_proxy",
    "auto_detect_interface": true,
    "final": "🐟 漏网之鱼",
    "rules": 
