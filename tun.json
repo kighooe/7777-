@@ -94,6 +94,7 @@
      {"protocol": "dns", "action": "hijack-dns"},
      {"clash_mode": "direct", "outbound": "🇨🇳 直连"},
      {"clash_mode": "global", "outbound": "GLOBAL"},
+     {"type": "domain_suffix","domain": "pathofexile.com", "outbound": "🇨🇳 直连"},
      {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "🇨🇳 直连"},
      {"rule_set": "geosite-private", "outbound": "🇨🇳 直连"},
      {"rule_set": "geosite-chat", "outbound": "🤖 OpenAI"},
