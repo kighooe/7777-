@@ -23,7 +23,7 @@
 
  "dns": 
  {
-   "servers": 
+   "server": 
    [
      {"tag": "dns_direct", "address": "61.153.177.196", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🇨🇳 直连"},
      {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 默认代理"}
@@ -136,6 +136,7 @@
     ]
   }
 }
+
 
 
 
