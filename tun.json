@@ -25,7 +25,7 @@
  {
    "servers": 
    [
-     {"tag": "dns_direct", "address": "10.10.10.7:5336", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🇨🇳 直连"},
+     {"tag": "dns_direct", "address": "10.10.10.2", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🇨🇳 直连"},
      {"tag": "dns_proxy", "address": "tls://8.8.8.8", "address_strategy": "ipv4_only", "strategy": "ipv4_only", "detour": "🚀 默认代理"},
      {"tag": "block", "address": "rcode://success"}
    ],
@@ -137,6 +137,7 @@
     ]
   }
 }
+
 
 
 
