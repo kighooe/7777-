@@ -63,25 +63,28 @@
 ],
 
   "outbounds": [
-    { "tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "♻️ TUIC自动", "♻️ VELSS自动", "♻️ 香港自动", "♻️ 狮城自动", "♻️ 韩国自动", "🌐 自选节点", "🇨🇳 直连"] },
+    { "tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "♻️ VELSS自动", "♻️ TUIC自动", "🌐 自选区域", "🌐 自选节点", "🇨🇳 直连"] },
     { "tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
-    { "tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     { "tag": "♻️ VELSS自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🌐 自选区域", "type": "selector", "outbounds": ["🇭🇰 香港自动", "🇸🇬 狮城自动", "🇼🇸 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动"]},
     { "tag": "🌐 自选节点", "type": "selector", "outbounds": ["{all}"]},
-    { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["♻️ 狮城自动", "♻️ 韩国自动"] },
-    { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🍎 Apple", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选节点"] },
-    { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选节点", "🇨🇳 直连"] },
-    { "tag": "♻️ 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)HK|香港|HongKong"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
-    { "tag": "♻️ 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)SG|新加坡|Singapore"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
-    { "tag": "♻️ 韩国自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)KR|韩国|Korea|Seoul"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🤖 OpenAI", "type": "selector", "outbounds": ["🇸🇬 狮城自动", "🇼🇸 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动"] },
+    { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "📲 Telegram", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🍎 Apple", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"] },
+    { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点", "🇨🇳 直连"] },
+    { "tag": "🇭🇰 香港自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)香港|hk"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🇼🇸 台湾自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)台湾|民国|tw"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🇸🇬 狮城自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)新加坡|sg"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🇯🇵 日本自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)日本|jp"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    { "tag": "🇰🇷 韩国自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)韩国|sk"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     { "tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
     { "tag": "🇨🇳 直连", "type": "direct" }
   ],
@@ -137,6 +140,7 @@
     ]
   }
 }
+
 
 
 
