@@ -17,9 +17,9 @@
     "independent_cache": true
   },
   "outbounds": [
-    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "♻️ VELSS自动", "♻️ TUIC自动", "🌐 自选区域", "🌐 自选节点", "🇨🇳 直连"]},
+    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "♻️ VLESS自动", "♻️ TUIC自动", "🌐 自选区域", "🌐 自选节点", "🇨🇳 直连"]},
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
-    {"tag": "♻️ VELSS自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    {"tag": "♻️ VLESS自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "🌐 自选区域", "type": "selector", "outbounds": ["🇭🇰 香港自动", "🇸🇬 狮城自动", "🇼🇸 台湾自动", "🇯🇵 日本自动", "🇰🇷 韩国自动"]},
     {"tag": "🌐 自选节点", "type": "selector", "outbounds": ["{all}"]},
