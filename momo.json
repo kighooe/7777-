@@ -10,7 +10,6 @@
       {"rule_set": "ad","action": "reject"},
       {"clash_mode": "direct", "server": "local"},
       {"clash_mode": "global", "server": "foreign"},
-      {"rule_set": "ad","server": "block"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"}
     ],
     "final": "foreign",
