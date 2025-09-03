@@ -1,7 +1,7 @@
 {
   "dns": {
     "servers": [
-      {"tag": "local", "type": "udp", "server": "61.153.177.196"},
+      {"tag": "local", "type": "udp", "server": "10.10.10.2"},
       {"tag": "public", "type": "https", "server": "dns.alidns.com", "domain_resolver": "local"},
       {"tag": "foreign", "type": "https", "server": "dns.google", "domain_resolver": "local"},
       {"tag": "fakeip", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
@@ -55,11 +55,6 @@
       {"clash_mode": "direct", "outbound": "🇨🇳 直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
       {"domain_suffix": "pathofexile.com", "outbound": "🇨🇳 直连"},
-      {"domain_suffix": "poeoverlay.com", "outbound": "🚀 默认代理"},
-      {"domain_suffix": "overwolf.com", "outbound": "🚀 默认代理"},
-      {"domain_suffix": "poe.ninja", "outbound": "🚀 默认代理"},
-      {"domain_suffix": "poe.trade", "outbound": "🚀 默认代理"},
-      {"domain_suffix": "filterblade.xyz", "outbound": "🚀 默认代理"},
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},
       {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
       {"rule_set": "geosite-google", "outbound": "🍀 Google"},
