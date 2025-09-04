@@ -53,7 +53,7 @@
       {"ip_is_private": true, "outbound": "🇨🇳 直连"},
       {"clash_mode": "direct", "outbound": "🇨🇳 直连"},
       {"clash_mode": "global", "outbound": "GLOBAL"},
-      {"domain_suffix": ["pathofexile2.com", "pathofexile.com",], "outbound": "🇨🇳 直连"},
+      {"domain_suffix": ["pathofexile2.com", "pathofexile.com"], "outbound": "🇨🇳 直连"},
       {"rule_set": "geosite-ai", "outbound": "🧠 AI"},
       {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
       {"rule_set": "geosite-google", "outbound": "🍀 Google"},
