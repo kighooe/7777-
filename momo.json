@@ -33,7 +33,7 @@
     {"tag": "🎵 TikTok", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
     {"tag": "🎥 Netflix", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
     {"tag": "💶 PayPal", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
-    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
+    {"tag": "🎮 Steam", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自选区域", "🌐 自选节点", "🇨🇳 直连"]},
     {"tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
     {"tag": "🍎 Apple", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自选区域", "🌐 自选节点"]},
