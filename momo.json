@@ -92,7 +92,6 @@
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"}
     ],
     "final": "🐠 漏网之鱼",
-    "default_http_client": "🚀 默认代理",
     "auto_detect_interface": true,
     "default_domain_resolver": {"server": "ali"}
   },
