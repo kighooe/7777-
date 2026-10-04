@@ -3,7 +3,7 @@
   "dns": {
     "servers": [
       {"tag": "local", "type": "local", "prefer_go": true},
-      {"tag": "ali", "type": "https", "server": "223.5.5.5"},
+      {"tag": "ali", "type": "https", "server": "10.10.10.2"},
       {"tag": "tx", "type": "https", "server": "doh.pub", "domain_resolver": "hosts"},
       {"tag": "google", "type": "https", "server": "8.8.8.8", "detour":"🚀 默认代理"},
       {"tag": "fake-ip-dns-server", "type": "fakeip", "inet4_range": "198.19.0.0/16"},
@@ -50,7 +50,7 @@
     {"tag": "♻️ VLESS自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
-    {"tag": "🇨🇳 直连", "type": "direct"}
+    {"tag": "🇨🇳 直连", "type": "direct" "domain_resolver": "ali"}
   ],
     "http_clients": [
     {"tag": "直连下载", "detour": "🇨🇳 直连"}
