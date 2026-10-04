@@ -52,6 +52,9 @@
     {"tag": "GLOBAL", "type": "selector", "outbounds": ["{all}"]},
     {"tag": "🇨🇳 直连", "type": "direct","domain_resolver": "ali"}
   ],
+  "http_clients": [
+    {"tag": "直连下载", "detour": "🇨🇳 直连"}
+  ],
   "route": {
     "rules": [
       {"type": "logical", "mode": "or", "rules": [{"domain_suffix": "push.apple.com"}, {"rule_set": "geoip-telegram"}], "invert": true, "action": "sniff", "sniffer": ["http", "tls", "stun", "quic", "dns"], "timeout": "100ms"},
@@ -92,6 +95,7 @@
       {"tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs"}
     ],
     "final": "🐠 漏网之鱼",
+    "default_http_client": "直连下载",
     "auto_detect_interface": true,
     "default_domain_resolver": {"server": "ali"}
   },
