@@ -101,6 +101,9 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
   - {name: 🌐 自选区域, type: select, proxies: [ 🇭🇰 香港自动, 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
   - {name: 🌐 自选节点, type: select, include-all: true, filter: "^((?!(🇨🇳 直连)).)*$"}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
+  - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
+  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
   - {name: 🤖 ChatGPT, type: select, proxies: [ 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
   - {name: 📹 YouTube, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点]}
   - {name: 🍀 Google, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点]}
@@ -118,9 +121,7 @@ proxy-groups:
   - {name: 🇼🇸 台湾自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(台湾|民国|tw)" }
   - {name: 🇯🇵 日本自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(日本|jp)" }
   - {name: 🇰🇷 韩国自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(韩国|sk)" }
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
-  - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
-  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
+
 
 #规则组
 rules:
