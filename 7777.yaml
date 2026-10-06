@@ -98,12 +98,10 @@ dns:
 # 出站策略
 proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [ ♻️ 自动选择, ♻️ VLESS自动, ♻️ TUIC自动, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
-  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
-  - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
-  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
-  - {name: 🌐 自选区域, type: select, proxies: [ 🇭🇰 香港自动, 🇸🇬 狮城自动, 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
+  - {name: 🌐 自选区域, type: select, proxies: [ 🇭🇰 香港自动, 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
   - {name: 🌐 自选节点, type: select, include-all: true, filter: "^((?!(🇨🇳 直连)).)*$"}
-  - {name: 🤖 ChatGPT, type: select, proxies: [ 🇸🇬 狮城自动, 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [ 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
   - {name: 📹 YouTube, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点]}
   - {name: 🍀 Google, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点]}
@@ -116,12 +114,13 @@ proxy-groups:
   - {name: 🪟 Microsoft, type: select, proxies: [🇨🇳 直连, 🌐 自选区域, 🌐 自选节点, 🚀 默认代理]}
   - {name: 🍎 Apple, type: select, proxies: [🇨🇳 直连, 🌐 自选区域, 🌐 自选节点, 🚀 默认代理]}
   - {name: 🎯 直连, type: select, proxies: [🇨🇳 直连, 🌐 自选区域, 🌐 自选节点, 🚀 默认代理]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
   - {name: 🇭🇰 香港自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(香港|hk)" }
   - {name: 🇼🇸 台湾自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(台湾|民国|tw)" }
-  - {name: 🇸🇬 狮城自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(新加坡|sg)" }
   - {name: 🇯🇵 日本自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(日本|jp)" }
   - {name: 🇰🇷 韩国自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(韩国|sk)" }
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
+  - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
+  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
 
 #规则组
 rules:
