@@ -97,14 +97,14 @@ dns:
  
 # 出站策略
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [ ♻️ 自动选择, ♻️ VLESS自动, ♻️ TUIC自动, 🌐 自选cloudflare节点, 🌐 自选自建节点, 🇨🇳 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [ ♻️ 自动选择, ♻️ TUIC自动, 🌐 自选cloudflare节点, 🌐 自选自建节点, 🇨🇳 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🇨🇳 直连]}
+  - {name: 🌐 自选节点, type: select, include-all: true}
   - {name: 🌐 自选自建节点, type: select, include-all: true, filter: "(?i)(vless|tuic)"}
   - {name: 🌐 自选cloudflare节点, type: select, include-all: true, filter: "(?i)^((?!(🇨🇳 直连|vless|tuic)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
-  - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
   - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
-  - {name: 🤖 ChatGPT, type: select, proxies: [ 🇼🇸 台湾自动, 🇯🇵 日本自动]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [ 🌐 自选节点], 🚀 默认代理}
   - {name: 📹 YouTube, type: select, proxies: [ 🚀 默认代理, 🌐 自选节点]}
   - {name: 🍀 Google, type: select, proxies: [ 🚀 默认代理, 🌐 自选节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🚀 默认代理, 🌐 自选节点]}
