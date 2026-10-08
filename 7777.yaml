@@ -97,10 +97,11 @@ dns:
  
 # 出站策略
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [ ♻️ 自动选择, ♻️ VLESS自动, ♻️ TUIC自动, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [ ♻️ 自动选择, ♻️ VLESS自动, ♻️ TUIC自动, 🌐 自选区域, 🌐 自选cloudflare节点, 🌐 自选节点, 🇨🇳 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🌐 自选区域, 🌐 自选节点, 🇨🇳 直连]}
   - {name: 🌐 自选区域, type: select, proxies: [ 🇭🇰 香港自动, 🇼🇸 台湾自动, 🇯🇵 日本自动, 🇰🇷 韩国自动]}
   - {name: 🌐 自选节点, type: select, include-all: true, filter: "^((?!(🇨🇳 直连)).)*$"}
+  - {name: 🌐 自选cloudflare节点, type: select, include-all: true, filter: "(?i)^((?!(🇨🇳 直连|vless|tuic)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "^((?!(🇨🇳 直连)).)*$"}
   - {name: ♻️ VLESS自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless)" }
   - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
