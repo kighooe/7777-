@@ -27,8 +27,8 @@
     "reverse_mapping": true
   },
   "outbounds": [
-    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自选节点", "♻️ 自动选择", "♻️ TUIC自动", "🇨🇳 直连"]},
-    {"tag": "🌐 自选节点", "type": "selector", "outbounds": ["{all}"]},
+    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自选节点", 🌐 cloudflare节点", "♻️ 自动选择", "♻️ TUIC自动", "🇨🇳 直连"]},
+    {"tag": "🌐 自选节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic|vless"] }] },
     {"tag": "🌐 cloudflare节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["(?i)tuic|vless"] }] },
     {"tag": "♻️ 自动选择", "type": "urltest", "outbounds": ["{all}"], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
