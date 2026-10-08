@@ -29,9 +29,9 @@
   "outbounds": [
     {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自建节点", "♻️ 自建自动", "♻️ TUIC自动", "🌐 cloudflare节点", "♻️ cloudflare自动", "🇨🇳 直连"]},
     {"tag": "🌐 自建节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic|vless"] }] },
-    {"tag": "🌐 cloudflare节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["(?i)tuic|vless"] }] },
     {"tag": "♻️ 自建自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic|vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "include", "keywords": ["(?i)tuic"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
+    {"tag": "🌐 cloudflare节点", "type": "selector", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["(?i)tuic|vless"] }] },
     {"tag": "♻️ cloudflare自动", "type": "urltest", "outbounds": ["{all}"], "filter": [{ "action": "exclude", "keywords": ["(?i)tuic|vless"] }], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30 },
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🇨🇳 直连"]},
     {"tag": "🧠 AI", "type": "selector", "outbounds": ["🌐 自建节点", "🚀 默认代理"]},
