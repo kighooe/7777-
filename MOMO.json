@@ -46,6 +46,7 @@
     {"tag": "🪟 Microsoft", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自建节点"]},
     {"tag": "🐬 OneDrive", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自建节点"]},
     {"tag": "🍎 Apple", "type": "selector", "outbounds": ["🇨🇳 直连", "🚀 默认代理", "🌐 自建节点"]},
+    {"tag": "GLOBAL", "type": "selector", "outbounds": ["🚀 默认代理", "🇨🇳 直连"]},
     {"tag": "🇨🇳 直连", "type": "direct", "domain_resolver": "ali"}
   ],
   "http_clients": [
