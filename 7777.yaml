@@ -96,14 +96,14 @@ dns:
  
 # 出站策略
 proxy-groups:
-  - {name: 🚀 默认代理, type: select, proxies: [ 🌐 自建节点, ♻️ 自建自动, ♻️ TUIC自动, ♻️ cloudflare自动, 🇨🇳 直连]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🇨🇳 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [ 🌐 自建节点, 🌐 cloudflare节点, ♻️ TUIC自动, ♻️ 自建自动, ♻️ cloudflare自动, 🇨🇳 直连]}
   - {name: 🌐 自建节点, type: select, include-all: true, filter: "(?i)(vless|tuic)"}
-  - {name: ♻️ 自建自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless|tuic)"}
-  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
   - {name: 🌐 cloudflare节点, type: select, include-all: true, filter: "(?i)(☁️)" }
+  - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🇨🇳 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [🌐 自建节点, 🌐 cloudflare节点, 🚀 默认代理]}
+  - {name: ♻️ TUIC自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(tuic)" }
+  - {name: ♻️ 自建自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(vless|tuic)"}
   - {name: ♻️ cloudflare自动, type: url-test, include-all: true, tolerance: 30, interval: 300, filter: "(?i)(☁️)" }
-  - {name: 🤖 ChatGPT, type: select, proxies: [🌐 自建节点, 🚀 默认代理]}
   - {name: 📹 YouTube, type: select, proxies: [ 🚀 默认代理, 🌐 自建节点]}
   - {name: 🍀 Google, type: select, proxies: [ 🚀 默认代理, 🌐 自建节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🚀 默认代理, 🌐 自建节点]}
