@@ -1,4 +1,4 @@
-{
+  {
   "$schema": "https://sing-box.sagernet.org/schema.json",
   "dns": {
     "servers": [
@@ -27,14 +27,14 @@
     "reverse_mapping": true
   },
   "outbounds": [
-    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自建节点", "♻️ 自建自动", "♻️ TUIC自动", "🌐 cloudflare节点", "♻️ cloudflare自动", "🇨🇳 直连"]},
+    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自建节点", "🌐 cloudflare节点", "♻️ TUIC自动", "♻️ 自建自动", "♻️ cloudflare自动", "🇨🇳 直连"]},
     {"tag": "🌐 自建节点", "type": "selector", "outbounds": []},
-    {"tag": "♻️ 自建自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
-    {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "🌐 cloudflare节点", "type": "selector", "outbounds": []},
-    {"tag": "♻️ cloudflare自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🇨🇳 直连"]},
-    {"tag": "🧠 AI", "type": "selector", "outbounds": ["🌐 自建节点", "🚀 默认代理"]},
+    {"tag": "🧠 AI", "type": "selector", "outbounds": ["🌐 自建节点", "🌐 cloudflare节点", "🚀 默认代理"]},
+    {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
+    {"tag": "♻️ 自建自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
+    {"tag": "♻️ cloudflare自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自建节点"]},
     {"tag": "🍀 Google", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自建节点"]},
     {"tag": "👨‍💻 Github", "type": "selector", "outbounds": ["🚀 默认代理", "🌐 自建节点"]},
