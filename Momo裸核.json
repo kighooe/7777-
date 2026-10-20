@@ -10,7 +10,7 @@
       {"type": "hosts", "tag": "hosts", "predefined": {"doh.pub": ["1.12.12.21", "120.53.53.53"]}}
     ],
     "rules": [
-      {"rule_set": "ad","action": "reject"},
+      {"rule_set":"ad","action":"reject"},
       {"query_type": ["HTTPS", "SVCB"], "action": "reject"},
       {"clash_mode": "Direct", "server": "ali"},
       {"clash_mode": "Global", "server": "fakeip"},
@@ -26,12 +26,39 @@
     "optimistic": {"enabled": true},
     "reverse_mapping": true
   },
+
+"endpoints": [
+  {
+    "type": "wireguard",
+    "tag": "wg-server",
+    "system": false,
+    "mtu": 1408,
+    "address": [
+      "12.12.12.1/24"
+    ],
+    "private_key": "eBb4+ZLrHLnJuiR23ftBOIxCR3bhX90IOj1lijJ2EFA=",
+    "listen_port": 46214,
+    "peers": [
+      {
+        "public_key": "g1U5zKTVcXm0FhWA7GiI5zw5TWEhKrI1n0hlATCNTAg=",
+        "pre_shared_key": "SwvaBcK5Ww+ebDGpPkxoPdsZiw7qKnBHQJMEHB4UWvI=",
+        "allowed_ips": [
+          "12.12.12.2/32"
+        ],
+        "persistent_keepalive_interval": 600
+      }
+    ]
+  }
+],
+
   "outbounds": [
-    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自建节点", "🌐 cloudflare节点", "♻️ TUIC自动", "♻️ 自建自动", "♻️ cloudflare自动", "🇨🇳 直连"]},
+    {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🌐 自建节点", "🌐 cloudflare节点", "♻️ VLESS自动", "♻️ H2自动", "♻️ TUIC自动", "♻️ 自建自动", "♻️ cloudflare自动", "🇨🇳 直连"]},
     {"tag": "🌐 自建节点", "type": "selector", "outbounds": []},
     {"tag": "🌐 cloudflare节点", "type": "selector", "outbounds": []},
     {"tag": "🐠 漏网之鱼", "type": "selector", "outbounds": ["🚀 默认代理", "🇨🇳 直连"]},
     {"tag": "🧠 AI", "type": "selector", "outbounds": ["🌐 自建节点", "🌐 cloudflare节点", "🚀 默认代理"]},
+    {"tag": "♻️ VLESS自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
+    {"tag": "♻️ H2自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "♻️ TUIC自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "♻️ 自建自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
     {"tag": "♻️ cloudflare自动", "type": "urltest", "outbounds": [], "url": "http://www.gstatic.com/generate_204", "interval": "5m", "tolerance": 30},
@@ -84,8 +111,8 @@
       {"rule_set": "geoip-telegram", "outbound": "📲 Telegram"},
       {"rule_set": "geoip-cn", "outbound": "🇨🇳 直连"}
     ],
-    "rule_set": [
-       {"tag": "ad", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/anti-ad-sing-box.srs"},
+    "rule_set": [               
+      {"tag":"ad","type":"remote","format":"binary","url":"https://gh-proxy.com/https://raw.githubusercontent.com/privacy-protection-tools/anti-ad.github.io/master/docs/anti-ad-sing-box.srs"},
       {"tag": ["fakeipfilter-cn", "fakeipfilter-!cn"], "type": "remote", "format": "source", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/rules/{tag}.json"},
       {"tag": ["geosite-category-ai-!cn", "geosite-youtube", "geosite-google", "geosite-github", "geosite-onedrive", "geosite-microsoft", "geosite-microsoft@cn","geosite-apple", "geosite-apple@cn", "geosite-telegram", "geosite-tiktok", "geosite-netflix", "geosite-paypal", "geosite-binance", "geosite-okx", "geosite-category-cryptocurrency", "geosite-steam@cn", "geosite-steam", "geosite-geolocation-!cn", "geosite-cn", "geosite-private"], "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/{tag}.srs"},
       {"tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"},
